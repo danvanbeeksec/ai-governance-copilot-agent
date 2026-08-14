@@ -2,6 +2,8 @@
 
 Track A requires no API, MCP server, custom connector, or external hosting. It uses Copilot Studio instructions and uploaded knowledge files.
 
+![Six-step Track A Guidance Agent build workflow](../assets/visuals/track-a-build-workflow.svg)
+
 Microsoft currently supports Markdown and YAML among the file types uploaded as Copilot Studio knowledge. Uploaded files require Dataverse search in the environment and are stored in Dataverse. Confirm your organization's data and retention requirements before uploading anything.
 
 ## Prerequisites
@@ -51,3 +53,9 @@ Track A is ready for a controlled pilot when it:
 - distinguishes potential applicability from human determination;
 - uses only fictional or synthetic demonstration information; and
 - states that qualified human review is required.
+
+## Intake behavior to verify
+
+![Guided intake workflow requiring explicit facts and confirmed interpretations](../assets/visuals/guided-intake-loop.svg)
+
+The agent should follow this loop conversationally. It may gather several closely related facts together, but it must preserve the distinction between explicit facts and proposed interpretations.

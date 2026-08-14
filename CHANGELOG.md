@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added accessible architecture, implementation-pattern, Track A build, and guided-intake graphics with editable workflow sources.
+
 ## 0.1.0
 
 - Added the no-connection Guidance Agent instructions and conversation starters.

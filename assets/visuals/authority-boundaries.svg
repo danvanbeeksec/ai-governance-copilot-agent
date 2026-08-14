@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI governance agent authority boundaries</title>
+  <desc id="desc">Four layers show the Control Framework as control authority, Control Plane as deterministic reference implementation, Copilot kit as generated implementation guidance, and Copilot agent as the conversational interface. A qualified human owns the final decision.</desc>
+  <style>
+    :root { color-scheme: light dark; }
+    .bg { fill: #f7f9fc; }
+    .panel { fill: #ffffff; stroke: #26364a; stroke-width: 2; }
+    .authority { fill: #dbeafe; stroke: #1d4ed8; }
+    .reference { fill: #e0e7ff; stroke: #4f46e5; }
+    .derivative { fill: #f3e8ff; stroke: #7e22ce; }
+    .interface { fill: #dcfce7; stroke: #15803d; }
+    .human { fill: #fff7ed; stroke: #c2410c; }
+    .title { fill: #142033; font: 700 34px system-ui, sans-serif; }
+    .heading { fill: #142033; font: 700 23px system-ui, sans-serif; }
+    .body { fill: #26364a; font: 18px system-ui, sans-serif; }
+    .label { fill: #334155; font: 700 15px system-ui, sans-serif; letter-spacing: 1.4px; }
+    .arrow { stroke: #475569; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .panel { fill: #111827; stroke: #94a3b8; }
+      .authority { fill: #172554; stroke: #60a5fa; }
+      .reference { fill: #312e81; stroke: #a5b4fc; }
+      .derivative { fill: #3b0764; stroke: #d8b4fe; }
+      .interface { fill: #052e16; stroke: #86efac; }
+      .human { fill: #431407; stroke: #fdba74; }
+      .title, .heading { fill: #f8fafc; }
+      .body, .label { fill: #dbe4ef; }
+      .arrow { stroke: #cbd5e1; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="760" rx="24"/>
+  <text class="title" x="70" y="66">Authority stays separate from the conversation</text>
+
+  <rect class="panel authority" x="70" y="105" width="480" height="115" rx="18"/>
+  <text class="label" x="100" y="138">CONTROL AUTHORITY</text>
+  <text class="heading" x="100" y="174">AI Governance Control Framework</text>
+  <text class="body" x="100" y="203">Controls, requirements, and applicability metadata</text>
+
+  <rect class="panel reference" x="70" y="265" width="480" height="115" rx="18"/>
+  <text class="label" x="100" y="298">REFERENCE IMPLEMENTATION</text>
+  <text class="heading" x="100" y="334">AI Governance Control Plane</text>
+  <text class="body" x="100" y="363">Validation, risk tiering, applicability, comparison</text>
+
+  <rect class="panel derivative" x="650" y="185" width="480" height="115" rx="18"/>
+  <text class="label" x="680" y="218">GENERATED DERIVATIVE</text>
+  <text class="heading" x="680" y="254">Copilot Agent Implementation Kit</text>
+  <text class="body" x="680" y="283">Instructions, knowledge, flow specifications, tests</text>
+
+  <rect class="panel interface" x="650" y="345" width="480" height="115" rx="18"/>
+  <text class="label" x="680" y="378">CONVERSATIONAL INTERFACE</text>
+  <text class="heading" x="680" y="414">Copilot Agent</text>
+  <text class="body" x="680" y="443">Guidance, intake, explanation, presentation</text>
+
+  <path class="arrow" d="M 550 162 C 610 162 610 220 650 240"/>
+  <path class="arrow" d="M 550 322 C 610 322 610 270 650 255"/>
+  <path class="arrow" d="M 890 300 L 890 345"/>
+
+  <rect class="panel human" x="250" y="565" width="700" height="125" rx="20"/>
+  <text class="label" x="600" y="601" text-anchor="middle">FINAL ACCOUNTABILITY</text>
+  <text class="heading" x="600" y="638" text-anchor="middle">Qualified human decision owner</text>
+  <text class="body" x="600" y="670" text-anchor="middle">Reviews context, resolves uncertainty, and owns the final decision</text>
+  <path class="arrow" d="M 890 460 C 890 520 760 535 710 565"/>
+</svg>

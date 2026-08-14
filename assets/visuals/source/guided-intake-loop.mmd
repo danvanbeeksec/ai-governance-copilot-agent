@@ -1,0 +1,12 @@
+flowchart TB
+    A["Ask a focused intake question"] --> B{"Answer explicit and unambiguous?"}
+    B -- Yes --> C["Record explicit fact"]
+    B -- No --> D["Propose value and basis"]
+    D --> E{"User confirms?"}
+    E -- No --> A
+    E -- Yes --> C
+    C --> F{"All required facts complete?"}
+    F -- No --> A
+    F -- Yes --> G["Produce structured fact summary"]
+    G --> H["Human review or deterministic evaluation"]
+    H -. "Track A does not assign an authoritative tier" .-> H

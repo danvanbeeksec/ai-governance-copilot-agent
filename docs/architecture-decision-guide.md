@@ -2,6 +2,8 @@
 
 This kit supports organizations at different levels of AI integration readiness. No pattern is universally best.
 
+![Comparison of Guidance Agent, Structured Assessment Agent, and MCP-backed Assistant](../assets/visuals/implementation-patterns.svg)
+
 | Pattern | External connection | Determinism | Primary use | Main limitation |
 | --- | --- | --- | --- | --- |
 | Guidance Agent | None | Low | Control education, guided intake, structured fact summaries | Must not claim authoritative tiers or control applicability |
@@ -25,3 +27,5 @@ Use the MCP-backed Assistant when a central governance service, cross-client reu
 - Qualified human: final governance decision and organization-specific interpretation.
 
 The Copilot implementation must never become an independently maintained control library.
+
+![Authority boundaries from Framework through human decision owner](../assets/visuals/authority-boundaries.svg)
