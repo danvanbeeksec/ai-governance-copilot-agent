@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Guidance Agent intake and inference loop</title>
+  <desc id="desc">The agent gathers explicit facts, checks completeness, confirms uncertain interpretations, and produces a structured fact summary without assigning an authoritative risk tier.</desc>
+  <style>
+    :root { color-scheme: light dark; }
+    .bg { fill: #f7f9fc; }
+    .node { fill: #fff; stroke: #2563eb; stroke-width: 2.5; }
+    .decision { fill: #fef3c7; stroke: #a16207; stroke-width: 2.5; }
+    .confirm { fill: #f3e8ff; stroke: #7e22ce; stroke-width: 2.5; }
+    .output { fill: #dcfce7; stroke: #15803d; stroke-width: 2.5; }
+    .stop { fill: #fee2e2; stroke: #b91c1c; stroke-width: 2.5; }
+    .title { fill: #142033; font: 700 34px system-ui, sans-serif; }
+    .heading { fill: #142033; font: 700 21px system-ui, sans-serif; }
+    .body { fill: #334155; font: 17px system-ui, sans-serif; }
+    .edge { fill: #475569; font: 700 15px system-ui, sans-serif; }
+    .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .node { fill: #111827; stroke: #60a5fa; }
+      .decision { fill: #422006; stroke: #facc15; }
+      .confirm { fill: #3b0764; stroke: #d8b4fe; }
+      .output { fill: #052e16; stroke: #86efac; }
+      .stop { fill: #450a0a; stroke: #fca5a5; }
+      .title, .heading { fill: #f8fafc; }
+      .body, .edge { fill: #dbe4ef; }
+      .arrow { stroke: #cbd5e1; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="820" rx="24"/>
+  <text class="title" x="65" y="65">Guided intake: confirm interpretations before use</text>
+
+  <rect class="node" x="390" y="105" width="420" height="105" rx="20"/>
+  <text class="heading" x="600" y="148" text-anchor="middle">Ask a focused intake question</text>
+  <text class="body" x="600" y="178" text-anchor="middle">Use the required fields and supported values</text>
+
+  <polygon class="decision" points="600,260 790,355 600,450 410,355"/>
+  <text class="heading" x="600" y="345" text-anchor="middle">Is the answer explicit</text>
+  <text class="heading" x="600" y="374" text-anchor="middle">and unambiguous?</text>
+
+  <rect class="confirm" x="75" y="305" width="270" height="120" rx="20"/>
+  <text class="heading" x="210" y="345" text-anchor="middle">Propose interpretation</text>
+  <text class="body" x="210" y="376" text-anchor="middle">State value + basis</text>
+  <text class="body" x="210" y="402" text-anchor="middle">Ask user to confirm</text>
+
+  <rect class="node" x="855" y="305" width="270" height="120" rx="20"/>
+  <text class="heading" x="990" y="350" text-anchor="middle">Record explicit fact</text>
+  <text class="body" x="990" y="382" text-anchor="middle">Do not add assumptions</text>
+
+  <polygon class="decision" points="600,500 775,585 600,670 425,585"/>
+  <text class="heading" x="600" y="575" text-anchor="middle">Are all required facts</text>
+  <text class="heading" x="600" y="604" text-anchor="middle">complete and confirmed?</text>
+
+  <rect class="output" x="820" y="535" width="305" height="120" rx="20"/>
+  <text class="heading" x="972" y="574" text-anchor="middle">Structured fact summary</text>
+  <text class="body" x="972" y="606" text-anchor="middle">Ready for human review or</text>
+  <text class="body" x="972" y="632" text-anchor="middle">deterministic evaluation</text>
+
+  <rect class="stop" x="375" y="715" width="450" height="70" rx="18"/>
+  <text class="heading" x="600" y="758" text-anchor="middle">Never claim an authoritative tier in Track A</text>
+
+  <path class="arrow" d="M 600 210 L 600 260"/>
+  <path class="arrow" d="M 410 355 L 345 355"/>
+  <text class="edge" x="370" y="335">NO</text>
+  <path class="arrow" d="M 790 355 L 855 355"/>
+  <text class="edge" x="812" y="335">YES</text>
+  <path class="arrow" d="M 990 425 C 990 480 775 490 710 525"/>
+  <path class="arrow" d="M 210 425 C 210 490 425 500 490 530"/>
+  <path class="arrow" d="M 600 500 C 600 470 250 480 210 425"/>
+  <text class="edge" x="310" y="480">NOT CONFIRMED</text>
+  <path class="arrow" d="M 775 585 L 820 585"/>
+  <text class="edge" x="786" y="565">YES</text>
+  <path class="arrow" d="M 425 585 C 335 585 315 165 390 158"/>
+  <text class="edge" x="305" y="565">NO</text>
+  <path class="arrow" d="M 972 655 C 972 700 790 725 750 730"/>
+</svg>

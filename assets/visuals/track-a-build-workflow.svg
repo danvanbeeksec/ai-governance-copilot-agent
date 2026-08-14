@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="670" viewBox="0 0 1500 670" role="img" aria-labelledby="title desc">
+  <title id="title">Track A Guidance Agent build workflow</title>
+  <desc id="desc">Six steps move from creating the Copilot agent to adding instructions, uploading generated knowledge, configuring boundaries, running synthetic tests, and sharing a controlled pilot.</desc>
+  <style>
+    :root { color-scheme: light dark; }
+    .bg { fill: #f7f9fc; }
+    .step { fill: #fff; stroke: #2563eb; stroke-width: 2.5; }
+    .test { fill: #fff7ed; stroke: #c2410c; }
+    .share { fill: #dcfce7; stroke: #15803d; }
+    .number { fill: #2563eb; }
+    .number-text { fill: #fff; font: 700 20px system-ui, sans-serif; }
+    .title { fill: #142033; font: 700 34px system-ui, sans-serif; }
+    .heading { fill: #142033; font: 700 21px system-ui, sans-serif; }
+    .body { fill: #334155; font: 17px system-ui, sans-serif; }
+    .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .step { fill: #111827; stroke: #60a5fa; }
+      .test { fill: #431407; stroke: #fdba74; }
+      .share { fill: #052e16; stroke: #86efac; }
+      .number { fill: #3b82f6; }
+      .title, .heading { fill: #f8fafc; }
+      .body { fill: #dbe4ef; }
+      .arrow { stroke: #cbd5e1; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1500" height="670" rx="24"/>
+  <text class="title" x="65" y="68">Track A: from empty agent to controlled pilot</text>
+
+  <path class="arrow" d="M 285 235 L 365 235"/>
+  <path class="arrow" d="M 705 235 L 785 235"/>
+  <path class="arrow" d="M 1125 235 L 1205 235"/>
+  <path class="arrow" d="M 1335 350 C 1335 430 1125 465 1040 465"/>
+  <path class="arrow" d="M 785 515 L 705 515"/>
+
+  <g>
+    <rect class="step" x="65" y="125" width="220" height="220" rx="20"/>
+    <circle class="number" cx="105" cy="168" r="25"/>
+    <text class="number-text" x="105" y="175" text-anchor="middle">1</text>
+    <text class="heading" x="95" y="225">Create the agent</text>
+    <text class="body" x="95" y="263">Name, description,</text>
+    <text class="body" x="95" y="290">purpose, and owner</text>
+  </g>
+  <g>
+    <rect class="step" x="365" y="125" width="340" height="220" rx="20"/>
+    <circle class="number" cx="405" cy="168" r="25"/>
+    <text class="number-text" x="405" y="175" text-anchor="middle">2</text>
+    <text class="heading" x="395" y="225">Add governed instructions</text>
+    <text class="body" x="395" y="263">Fact handling, limitations,</text>
+    <text class="body" x="395" y="290">privacy, and human review</text>
+  </g>
+  <g>
+    <rect class="step" x="785" y="125" width="340" height="220" rx="20"/>
+    <circle class="number" cx="825" cy="168" r="25"/>
+    <text class="number-text" x="825" y="175" text-anchor="middle">3</text>
+    <text class="heading" x="815" y="225">Upload three knowledge files</text>
+    <text class="body" x="815" y="263">Controls, guided intake,</text>
+    <text class="body" x="815" y="290">provenance and boundaries</text>
+  </g>
+  <g>
+    <rect class="step" x="1205" y="125" width="230" height="220" rx="20"/>
+    <circle class="number" cx="1245" cy="168" r="25"/>
+    <text class="number-text" x="1245" y="175" text-anchor="middle">4</text>
+    <text class="heading" x="1235" y="225">Set boundaries</text>
+    <text class="body" x="1235" y="263">No tools, no external</text>
+    <text class="body" x="1235" y="290">actions, sign-in required</text>
+  </g>
+  <g>
+    <rect class="step test" x="785" y="405" width="340" height="205" rx="20"/>
+    <circle class="number" cx="825" cy="448" r="25"/>
+    <text class="number-text" x="825" y="455" text-anchor="middle">5</text>
+    <text class="heading" x="815" y="505">Run synthetic validation</text>
+    <text class="body" x="815" y="543">Test intake, inference, control</text>
+    <text class="body" x="815" y="570">explanation, and tier pressure</text>
+  </g>
+  <g>
+    <rect class="step share" x="365" y="405" width="340" height="205" rx="20"/>
+    <circle class="number" cx="405" cy="448" r="25"/>
+    <text class="number-text" x="405" y="455" text-anchor="middle">6</text>
+    <text class="heading" x="395" y="505">Share a controlled pilot</text>
+    <text class="body" x="395" y="543">Start with intended users,</text>
+    <text class="body" x="395" y="570">capture results, then expand</text>
+  </g>
+</svg>

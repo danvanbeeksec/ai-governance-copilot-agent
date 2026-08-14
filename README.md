@@ -4,6 +4,8 @@ A practitioner-oriented implementation kit for building an AI governance agent i
 
 The kit translates a public AI governance framework and deterministic reference implementation into Copilot-ready instructions, knowledge files, low-code specifications, and validation scenarios. It is designed for governance practitioners who can configure a Copilot agent but might not be authorized or equipped to deploy a hosted integration.
 
+![Authority boundaries from Framework through human decision owner](assets/visuals/authority-boundaries.svg)
+
 ## Start here
 
 Choose one of two tracks:
@@ -38,6 +40,8 @@ Follow [`docs/build-structured-assessment-agent.md`](docs/build-structured-asses
 | MCP-backed Assistant | Yes | Yes | A centralized, reusable implementation can be hosted and governed |
 
 Read [`docs/architecture-decision-guide.md`](docs/architecture-decision-guide.md) before selecting a pattern.
+
+The complete graphic set and editable workflow sources are in [`docs/visual-workflows.md`](docs/visual-workflows.md).
 
 ## Authority and provenance
 
