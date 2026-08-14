@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "knowledge/control-library.md": "3d1cd8a6a941ce3c1f3d953c0a647c9fc211cd85543cd89f90ce1087ee2e4fc6",
+    "knowledge/guided-intake.md": "5f9cb9b764e607e47152f4e2322070ba4c922e0e4a49f9f54091d69ea7ea2e3f",
+    "knowledge/provenance-and-boundaries.md": "652adeae9c91ca8e95ef453ab1935562f2617a0507019bbd53a305ba61757112",
+    "structured-assessment/applicability-specification.yaml": "55dc3767aeb8d4eb948a019d0d3dbbf5c3e4f37d88e924b420a36d985df3beee",
+    "structured-assessment/baseline-matrix.csv": "cb987cfb3e2ab23a9aa091328edccd62a178bb7c24f1231fa0d856b167db7b4a",
+    "structured-assessment/decision-specification.yaml": "5f3c753b0d2b48891e03ac73682d413e6a423312d1221e949476f68300c0ef41",
+    "structured-assessment/elevation-rules.csv": "ecccb235285f957920bb11ca8b5c2cded5081a51328a4576741831b337b59e36",
+    "validation/expected-results.json": "19a62d3fd8e0bd698c4f2f7135fcff898628fa2fa38f137243342ff7876b826a"
+  },
+  "generated_from": {
+    "control_plane": {
+      "commit": "cc31e6ae28ed239fbad6b8171822d4cfc0bfdb39",
+      "repository": "danvanbeeksec/ai-governance-control-plane",
+      "role": "authoritative_reference_implementation",
+      "version": "0.5.0"
+    },
+    "framework": {
+      "commit": "78865d5fbe8d9fc83389b03bd34b44c27040d81a",
+      "repository": "danvanbeeksec/ai-governance-control-framework",
+      "role": "authoritative_control_asset",
+      "version": "1.1.0"
+    }
+  },
+  "schema_version": "1.0"
+}

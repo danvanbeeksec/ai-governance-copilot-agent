@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-governance-copilot-agent"
+version = "0.1.0"
+description = "No-MCP Microsoft Copilot implementation kit for the Independent AI Control Library"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Dan Van Beek" }]
+dependencies = [
+  "PyYAML>=6.0.3,<7",
+  "ai-governance-control-plane @ git+https://github.com/danvanbeeksec/ai-governance-control-plane.git@cc31e6ae28ed239fbad6b8171822d4cfc0bfdb39",
+]
+
+[project.scripts]
+build-copilot-agent-assets = "ai_governance_copilot_agent.generator:main"
+
+[project.urls]
+Repository = "https://github.com/danvanbeeksec/ai-governance-copilot-agent"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_governance_copilot_agent"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"sources.lock.yaml" = "ai_governance_copilot_agent/resources/sources.lock.yaml"
+"tests/fixtures/acceptance_scenarios.json" = "ai_governance_copilot_agent/resources/acceptance_scenarios.json"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
