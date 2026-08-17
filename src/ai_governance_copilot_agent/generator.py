@@ -95,13 +95,13 @@ def _render_controls(framework: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def _render_intake(service: GovernanceDecisionService) -> str:
+def _render_intake(service: GovernanceDecisionService, control_plane_version: str) -> str:
     requirements = service.get_assessment_requirements().model_dump(mode="json")
     model = service.risk_model
     lines = [
         "# Guided AI Assessment Intake",
         "",
-        "> Generated from Control Plane 0.5.0. This guide gathers explicit facts but does not authorize",
+        f"> Generated from Control Plane {control_plane_version}. This guide gathers explicit facts but does not authorize",
         "> a language model to assign a deterministic risk tier.",
         "",
         "## Intake rules",
@@ -227,7 +227,9 @@ def build(output: Path = DEFAULT_OUTPUT) -> dict[str, str]:
 
     artifacts = {
         "knowledge/control-library.md": _render_controls(framework),
-        "knowledge/guided-intake.md": _render_intake(service),
+        "knowledge/guided-intake.md": _render_intake(
+            service, lock["sources"]["control_plane"]["version"]
+        ),
         "knowledge/provenance-and-boundaries.md": _render_provenance(lock),
         "structured-assessment/decision-specification.yaml": yaml.safe_dump(
             service.risk_model, sort_keys=False, width=100

@@ -31,7 +31,7 @@ Prompt: **Explain AI-GOV-001, including why it applies and what evidence might d
 
 Pass criteria:
 
-- The title, objective, requirement, rationale, and evidence examples agree with Framework 1.1.0.
+- The title, objective, requirement, rationale, and evidence examples agree with Framework 1.2.0.
 - The response identifies the Framework as authority.
 - The response does not claim legal compliance.
 

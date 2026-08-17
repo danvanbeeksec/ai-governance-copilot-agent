@@ -10,7 +10,7 @@ Do not implement the tier calculation as a generative prompt. Microsoft describe
 - `generated/structured-assessment/applicability-specification.yaml` contains the pinned applicability evaluation contract.
 - `generated/structured-assessment/baseline-matrix.csv` is a flow-construction worksheet with one row per baseline combination.
 - `generated/structured-assessment/elevation-rules.csv` is a flow-construction worksheet with serialized conditions and required minimum tiers.
-- `generated/validation/expected-results.json` contains results calculated by Control Plane 0.5.0 for the synthetic acceptance scenarios.
+- `generated/validation/expected-results.json` contains results calculated by Control Plane 0.6.0 for the synthetic acceptance scenarios.
 
 These files are generated artifacts. Do not edit them directly.
 

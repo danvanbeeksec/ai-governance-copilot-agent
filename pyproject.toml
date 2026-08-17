@@ -12,7 +12,7 @@ license = { file = "LICENSE" }
 authors = [{ name = "Dan Van Beek" }]
 dependencies = [
   "PyYAML>=6.0.3,<7",
-  "ai-governance-control-plane @ git+https://github.com/danvanbeeksec/ai-governance-control-plane.git@cc31e6ae28ed239fbad6b8171822d4cfc0bfdb39",
+  "ai-governance-control-plane @ git+https://github.com/danvanbeeksec/ai-governance-control-plane.git@a6eae7a62dfde13c241bb620465e0b010f208518",
 ]
 
 [project.scripts]

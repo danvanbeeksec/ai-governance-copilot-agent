@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Regenerated Copilot derivatives from Framework 1.2.0 and Control Plane 0.6.0.
+- Preserved the Phase 1 three-tier risk and autonomy model while inheriting Agent Baseline traceability through existing common controls.
+
+## Unreleased
+
 - Added accessible architecture, implementation-pattern, Track A build, and guided-intake graphics with editable workflow sources.
 
 ## 0.1.0

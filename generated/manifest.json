@@ -1,9 +1,9 @@
 {
   "artifacts": {
-    "knowledge/control-library.md": "3d1cd8a6a941ce3c1f3d953c0a647c9fc211cd85543cd89f90ce1087ee2e4fc6",
-    "knowledge/guided-intake.md": "5f9cb9b764e607e47152f4e2322070ba4c922e0e4a49f9f54091d69ea7ea2e3f",
-    "knowledge/provenance-and-boundaries.md": "652adeae9c91ca8e95ef453ab1935562f2617a0507019bbd53a305ba61757112",
-    "structured-assessment/applicability-specification.yaml": "55dc3767aeb8d4eb948a019d0d3dbbf5c3e4f37d88e924b420a36d985df3beee",
+    "knowledge/control-library.md": "8d9046d60554fb523cf6287f1d62ccf7c9304f8a85b4a3618586cd5b92a21990",
+    "knowledge/guided-intake.md": "df1166c62ebd24512916a364f9a874d7c3617d49115d8d5ea2c745025dcf45ad",
+    "knowledge/provenance-and-boundaries.md": "1ed10985c45f70391653bc9c8d1ccf3299f6eeed07b51f80c1394cb9cb56bf61",
+    "structured-assessment/applicability-specification.yaml": "79a9c07f6be56618dab329b02cce5a3d220df9a361ab0c23b1a402b9ca9e5feb",
     "structured-assessment/baseline-matrix.csv": "cb987cfb3e2ab23a9aa091328edccd62a178bb7c24f1231fa0d856b167db7b4a",
     "structured-assessment/decision-specification.yaml": "5f3c753b0d2b48891e03ac73682d413e6a423312d1221e949476f68300c0ef41",
     "structured-assessment/elevation-rules.csv": "ecccb235285f957920bb11ca8b5c2cded5081a51328a4576741831b337b59e36",
@@ -11,16 +11,16 @@
   },
   "generated_from": {
     "control_plane": {
-      "commit": "cc31e6ae28ed239fbad6b8171822d4cfc0bfdb39",
+      "commit": "a6eae7a62dfde13c241bb620465e0b010f208518",
       "repository": "danvanbeeksec/ai-governance-control-plane",
       "role": "authoritative_reference_implementation",
-      "version": "0.5.0"
+      "version": "0.6.0"
     },
     "framework": {
-      "commit": "78865d5fbe8d9fc83389b03bd34b44c27040d81a",
+      "commit": "8c95890cb2baf298e460a9a24978503286bc6e2f",
       "repository": "danvanbeeksec/ai-governance-control-framework",
       "role": "authoritative_control_asset",
-      "version": "1.1.0"
+      "version": "1.2.0"
     }
   },
   "schema_version": "1.0"

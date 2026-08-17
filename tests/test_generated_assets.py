@@ -17,8 +17,8 @@ GENERATED = ROOT / "generated"
 def test_release_and_source_versions_are_explicit():
     assert __version__ == "0.1.0"
     lock = yaml.safe_load((ROOT / "sources.lock.yaml").read_text())
-    assert lock["sources"]["framework"]["version"] == "1.1.0"
-    assert lock["sources"]["control_plane"]["version"] == "0.5.0"
+    assert lock["sources"]["framework"]["version"] == "1.2.0"
+    assert lock["sources"]["control_plane"]["version"] == "0.6.0"
 
 
 def test_committed_derivatives_are_current(tmp_path: Path):
