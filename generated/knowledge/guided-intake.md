@@ -1,6 +1,6 @@
 # Guided AI Assessment Intake
 
-> Generated from Control Plane 0.5.0. This guide gathers explicit facts but does not authorize
+> Generated from Control Plane 0.6.0. This guide gathers explicit facts but does not authorize
 > a language model to assign a deterministic risk tier.
 
 ## Intake rules

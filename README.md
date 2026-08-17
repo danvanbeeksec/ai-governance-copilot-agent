@@ -47,13 +47,15 @@ The complete graphic set and editable workflow sources are in [`docs/visual-work
 
 | Asset | Role | Pinned version |
 | --- | --- | --- |
-| [AI Governance Control Framework](https://github.com/danvanbeeksec/ai-governance-control-framework) | Authoritative control content | 1.1.0 |
-| [AI Governance Control Plane](https://github.com/danvanbeeksec/ai-governance-control-plane) | Deterministic reference implementation | 0.5.0 |
+| [AI Governance Control Framework](https://github.com/danvanbeeksec/ai-governance-control-framework) | Authoritative control content | 1.2.0 |
+| [AI Governance Control Plane](https://github.com/danvanbeeksec/ai-governance-control-plane) | Deterministic reference implementation | 0.6.0 |
 | This repository | Copilot implementation guidance and generated derivatives | 0.1.0 |
 
 Exact source commits are recorded in [`sources.lock.yaml`](sources.lock.yaml). Generated files include a provenance and hash manifest.
 
 The Framework remains the control authority. The Control Plane remains the reference implementation for deterministic validation, risk evaluation, applicability, and comparison. The Copilot agent remains an interface and guidance layer.
+
+Agent Baseline v1.0-draft traceability is inherited from the Framework's existing common controls. This kit keeps the Phase 1 three-tier risk model and existing autonomy facts and does not introduce a multidimensional agent assurance classifier.
 
 ## Repository contents
 

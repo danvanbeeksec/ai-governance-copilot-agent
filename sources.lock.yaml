@@ -2,11 +2,11 @@ schema_version: "1.0"
 sources:
   framework:
     repository: danvanbeeksec/ai-governance-control-framework
-    version: 1.1.0
-    commit: 78865d5fbe8d9fc83389b03bd34b44c27040d81a
+    version: 1.2.0
+    commit: 8c95890cb2baf298e460a9a24978503286bc6e2f
     role: authoritative_control_asset
   control_plane:
     repository: danvanbeeksec/ai-governance-control-plane
-    version: 0.5.0
-    commit: cc31e6ae28ed239fbad6b8171822d4cfc0bfdb39
+    version: 0.6.0
+    commit: a6eae7a62dfde13c241bb620465e0b010f208518
     role: authoritative_reference_implementation
