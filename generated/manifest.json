@@ -1,27 +1,39 @@
 {
   "artifacts": {
-    "knowledge/control-library.md": "8d9046d60554fb523cf6287f1d62ccf7c9304f8a85b4a3618586cd5b92a21990",
-    "knowledge/guided-intake.md": "df1166c62ebd24512916a364f9a874d7c3617d49115d8d5ea2c745025dcf45ad",
-    "knowledge/provenance-and-boundaries.md": "1ed10985c45f70391653bc9c8d1ccf3299f6eeed07b51f80c1394cb9cb56bf61",
+    "knowledge/control-library.md": "eca7d56beeb81a1506e8ee9f9fee49ef1dac3c5adb03c3f992fda2b973a35863",
+    "knowledge/guided-intake.md": "ad7368468206e542b796bde2fee8b527d656295468cc4d1873962f7f036cd94f",
+    "knowledge/provenance-and-boundaries.md": "e173642c21ade2a2fdd963fd3ab1f2fb60a8d792fca202792cc66c248ed9a1c1",
     "structured-assessment/applicability-specification.yaml": "79a9c07f6be56618dab329b02cce5a3d220df9a361ab0c23b1a402b9ca9e5feb",
     "structured-assessment/baseline-matrix.csv": "cb987cfb3e2ab23a9aa091328edccd62a178bb7c24f1231fa0d856b167db7b4a",
     "structured-assessment/decision-specification.yaml": "5f3c753b0d2b48891e03ac73682d413e6a423312d1221e949476f68300c0ef41",
     "structured-assessment/elevation-rules.csv": "ecccb235285f957920bb11ca8b5c2cded5081a51328a4576741831b337b59e36",
+    "structured-assessment/input-schema.json": "6df6d4b0d2369630e0866705e8aafb2abdae5f60574780f61f9276fbb03fa5bc",
     "validation/expected-results.json": "19a62d3fd8e0bd698c4f2f7135fcff898628fa2fa38f137243342ff7876b826a"
   },
   "generated_from": {
     "control_plane": {
-      "commit": "a6eae7a62dfde13c241bb620465e0b010f208518",
+      "commit": "fc25f393d2b7c3f374e3f4bc9f1d7c145515d243",
+      "implementation_sha256": "8ea5cd9ad6422684ebcfdadaeeda9ad67d93077531d2c6ec37151ba5df8d2b87",
+      "policy_sha256": "e0d2340009ea841375c85c535af3bda647f8be55abb3246a12f1130b71d4d92f",
       "repository": "danvanbeeksec/ai-governance-control-plane",
       "role": "authoritative_reference_implementation",
-      "version": "0.6.0"
+      "version": "0.7.0"
     },
     "framework": {
-      "commit": "8c95890cb2baf298e460a9a24978503286bc6e2f",
+      "commit": "9f400a150396b79b1624660c111bcfd89a0d902c",
+      "distribution_version": "1.2.1",
       "repository": "danvanbeeksec/ai-governance-control-framework",
       "role": "authoritative_control_asset",
+      "sha256": "sha256:e01c880933b3385f6b8a490f867cd5d2627a97134eaad8fced2a15d4831eb510",
       "version": "1.2.0"
     }
   },
-  "schema_version": "1.0"
+  "schema_version": "1.0",
+  "verified_runtime": {
+    "framework_commit": "9f400a150396b79b1624660c111bcfd89a0d902c",
+    "framework_digest": "sha256:e01c880933b3385f6b8a490f867cd5d2627a97134eaad8fced2a15d4831eb510",
+    "implementation_sha256": "8ea5cd9ad6422684ebcfdadaeeda9ad67d93077531d2c6ec37151ba5df8d2b87",
+    "policy_sha256": "e0d2340009ea841375c85c535af3bda647f8be55abb3246a12f1130b71d4d92f",
+    "version": "0.7.0"
+  }
 }

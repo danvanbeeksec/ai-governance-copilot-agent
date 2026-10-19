@@ -4,7 +4,7 @@
 > This file supports guidance and explanation. It does not determine risk tiers or legal compliance.
 
 Framework version: 1.2.0
-Framework status: draft
+Framework status: published
 
 ## Framework limitations
 

@@ -1,12 +1,16 @@
-schema_version: "1.0"
+schema_version: '1.0'
 sources:
   framework:
     repository: danvanbeeksec/ai-governance-control-framework
     version: 1.2.0
-    commit: 8c95890cb2baf298e460a9a24978503286bc6e2f
+    commit: 9f400a150396b79b1624660c111bcfd89a0d902c
     role: authoritative_control_asset
+    distribution_version: 1.2.1
+    sha256: sha256:e01c880933b3385f6b8a490f867cd5d2627a97134eaad8fced2a15d4831eb510
   control_plane:
     repository: danvanbeeksec/ai-governance-control-plane
-    version: 0.6.0
-    commit: a6eae7a62dfde13c241bb620465e0b010f208518
+    version: 0.7.0
+    commit: fc25f393d2b7c3f374e3f4bc9f1d7c145515d243
     role: authoritative_reference_implementation
+    implementation_sha256: 8ea5cd9ad6422684ebcfdadaeeda9ad67d93077531d2c6ec37151ba5df8d2b87
+    policy_sha256: e0d2340009ea841375c85c535af3bda647f8be55abb3246a12f1130b71d4d92f

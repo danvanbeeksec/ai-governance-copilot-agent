@@ -6,13 +6,13 @@ This knowledge bundle is a generated derivative. It is not a new control authori
 
 - Repository: `danvanbeeksec/ai-governance-control-framework`
 - Version: `1.2.0`
-- Commit: `8c95890cb2baf298e460a9a24978503286bc6e2f`
+- Commit: `9f400a150396b79b1624660c111bcfd89a0d902c`
 
 ## Deterministic reference implementation
 
 - Repository: `danvanbeeksec/ai-governance-control-plane`
-- Version: `0.6.0`
-- Commit: `a6eae7a62dfde13c241bb620465e0b010f208518`
+- Version: `0.7.0`
+- Commit: `fc25f393d2b7c3f374e3f4bc9f1d7c145515d243`
 
 The Guidance Agent may explain controls, gather facts, identify missing information, and support human discussion. It must not represent model-generated reasoning as a deterministic Control Plane result. The Structured Assessment track is a versioned derivative that must be revalidated whenever either pinned source changes.
 

@@ -1,0 +1,148 @@
+{
+  "additionalProperties": false,
+  "description": "Canonical executable assessment input.",
+  "properties": {
+    "accountable_owner": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Accountable Owner",
+      "type": "string"
+    },
+    "action_authority": {
+      "enum": [
+        "generate_only",
+        "recommend",
+        "modify_nonproduction",
+        "modify_production",
+        "execute_material_transaction",
+        "safety_relevant_action"
+      ],
+      "title": "Action Authority",
+      "type": "string"
+    },
+    "agent_capabilities": {
+      "items": {
+        "enum": [
+          "external_tools",
+          "external_communication",
+          "delegation",
+          "persistent_memory"
+        ],
+        "type": "string"
+      },
+      "title": "Agent Capabilities",
+      "type": "array",
+      "uniqueItems": true
+    },
+    "assessment_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Assessment Id",
+      "type": "string"
+    },
+    "autonomy_level": {
+      "enum": [
+        "autonomous",
+        "conditionally_autonomous",
+        "human_supervised"
+      ],
+      "title": "Autonomy Level",
+      "type": "string"
+    },
+    "business_purpose": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Business Purpose",
+      "type": "string"
+    },
+    "decision_impact": {
+      "enum": [
+        "none",
+        "operational",
+        "consequential",
+        "regulated_or_consequential"
+      ],
+      "title": "Decision Impact",
+      "type": "string"
+    },
+    "external_reach": {
+      "enum": [
+        "none",
+        "bounded",
+        "broad"
+      ],
+      "title": "External Reach",
+      "type": "string"
+    },
+    "human_review": {
+      "enum": [
+        "prior_to_each_meaningful_action",
+        "checkpoints_or_exceptions",
+        "no_prior_review"
+      ],
+      "title": "Human Review",
+      "type": "string"
+    },
+    "information_sensitivity": {
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ],
+      "title": "Information Sensitivity",
+      "type": "string"
+    },
+    "reversibility": {
+      "enum": [
+        "easy",
+        "recoverable_with_effort",
+        "difficult"
+      ],
+      "title": "Reversibility",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "system_access": {
+      "enum": [
+        "none",
+        "standard",
+        "privileged"
+      ],
+      "title": "System Access",
+      "type": "string"
+    },
+    "system_name": {
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "System Name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "assessment_id",
+    "system_name",
+    "business_purpose",
+    "accountable_owner",
+    "autonomy_level",
+    "information_sensitivity",
+    "human_review",
+    "action_authority",
+    "system_access",
+    "external_reach",
+    "reversibility",
+    "decision_impact",
+    "agent_capabilities"
+  ],
+  "title": "Assessment",
+  "type": "object"
+}
