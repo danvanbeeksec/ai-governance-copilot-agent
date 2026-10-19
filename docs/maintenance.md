@@ -23,3 +23,7 @@ When updating a source:
 7. publish a reviewed kit release.
 
 Never edit generated knowledge or decision specifications as an independent source of truth.
+
+The source lock records the Framework digest and the actual Control Plane implementation and policy hashes. Source version text alone is insufficient. Recompute those identities only from the reviewed pinned dependency, regenerate assets, and review the complete diff. Generation validates every identity before creating any output files.
+
+Deployment requirements are generated from `deployment/uv.lock` with `python scripts/lock_dependencies.py`. CI verifies both that export and the derivative manifest. Release tags and tenant validation records are separate from source generation.

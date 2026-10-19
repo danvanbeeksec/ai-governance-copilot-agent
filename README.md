@@ -6,6 +6,8 @@ The kit translates a public AI governance framework and deterministic reference 
 
 ![Authority boundaries from Framework through human decision owner](assets/visuals/authority-boundaries.svg)
 
+Candidate 0.2.0 refreshes the dependency chain and verifies actual executable and policy hashes before generation. It remains an implementation kit: repository tests do not establish tenant execution. Use the [Control Plane](https://github.com/danvanbeeksec/ai-governance-control-plane) for the main interactive demonstration, and [record actual validation](docs/validation-record.md) for any agent built from this kit.
+
 ## Start here
 
 Choose one of two tracks:
@@ -48,8 +50,8 @@ The complete graphic set and editable workflow sources are in [`docs/visual-work
 | Asset | Role | Pinned version |
 | --- | --- | --- |
 | [AI Governance Control Framework](https://github.com/danvanbeeksec/ai-governance-control-framework) | Authoritative control content | 1.2.0 |
-| [AI Governance Control Plane](https://github.com/danvanbeeksec/ai-governance-control-plane) | Deterministic reference implementation | 0.6.0 |
-| This repository | Copilot implementation guidance and generated derivatives | 0.1.0 |
+| [AI Governance Control Plane](https://github.com/danvanbeeksec/ai-governance-control-plane) | Deterministic reference implementation | 0.7.0 candidate |
+| This repository | Copilot implementation guidance and generated derivatives | 0.2.0 candidate |
 
 Exact source commits are recorded in [`sources.lock.yaml`](sources.lock.yaml). Generated files include a provenance and hash manifest.
 

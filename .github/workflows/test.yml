@@ -11,18 +11,29 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python: ["3.10", "3.12", "3.14"]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python }}
           cache: pip
       - name: Install pinned authoritative dependencies
-        run: python -m pip install -r requirements-dev.txt
+        run: python -m pip install -r requirements-dev.txt uv==0.13.1
+      - name: Verify deployment lock export
+        run: python scripts/lock_dependencies.py --check
       - name: Verify generated derivatives and tests
         run: python -m pytest
       - name: Compile source and tests
         run: python -m compileall -q src tests
       - name: Build installable generator wheel
         run: python -m pip wheel . --no-deps --wheel-dir dist
+      - name: Verify installed generator outside the checkout
+        run: |
+          python -m venv /tmp/copilot-wheel
+          /tmp/copilot-wheel/bin/pip install dist/*.whl
+          cd /tmp
+          /tmp/copilot-wheel/bin/python -I -c 'from pathlib import Path; from ai_governance_copilot_agent.generator import build; build(Path("/tmp/copilot-generated"))'

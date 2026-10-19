@@ -6,11 +6,12 @@ Do not implement the tier calculation as a generative prompt. Microsoft describe
 
 ## Derived specifications
 
+- `generated/structured-assessment/input-schema.json` contains canonical input types, limits, enums, and uniqueness constraints.
 - `generated/structured-assessment/decision-specification.yaml` contains the pinned baseline matrix and elevation rules.
 - `generated/structured-assessment/applicability-specification.yaml` contains the pinned applicability evaluation contract.
 - `generated/structured-assessment/baseline-matrix.csv` is a flow-construction worksheet with one row per baseline combination.
 - `generated/structured-assessment/elevation-rules.csv` is a flow-construction worksheet with serialized conditions and required minimum tiers.
-- `generated/validation/expected-results.json` contains results calculated by Control Plane 0.6.0 for the synthetic acceptance scenarios.
+- `generated/validation/expected-results.json` contains results calculated by Control Plane 0.7.0 candidate for the synthetic acceptance scenarios.
 
 These files are generated artifacts. Do not edit them directly.
 

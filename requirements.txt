@@ -1,0 +1,24 @@
+# Generated from pyproject.toml and deployment/uv.lock. Run python scripts/lock_dependencies.py.
+ai-governance-control-framework @ git+https://github.com/danvanbeeksec/ai-governance-control-framework.git@9f400a150396b79b1624660c111bcfd89a0d902c
+    # via ai-governance-control-plane
+ai-governance-control-plane @ git+https://github.com/danvanbeeksec/ai-governance-control-plane.git@fc25f393d2b7c3f374e3f4bc9f1d7c145515d243
+    # via ai-governance-copilot-agent
+annotated-types==0.8.0
+    # via pydantic
+pydantic==2.14.1
+    # via ai-governance-control-plane
+pydantic-core==2.50.1
+    # via pydantic
+pyyaml==6.0.3
+    # via
+    #   ai-governance-control-plane
+    #   ai-governance-copilot-agent
+typing-extensions==4.16.0
+    # via
+    #   pydantic
+    #   pydantic-core
+    #   typing-inspection
+typing-inspection==0.4.4
+    # via pydantic
+
+.

@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 
 import yaml
+import pytest
+from copy import deepcopy
 from ai_governance_control_framework import controls_text
 from ai_governance_control_plane.service import GovernanceDecisionService
 
@@ -15,10 +17,10 @@ GENERATED = ROOT / "generated"
 
 
 def test_release_and_source_versions_are_explicit():
-    assert __version__ == "0.1.0"
+    assert __version__ == "0.2.0"
     lock = yaml.safe_load((ROOT / "sources.lock.yaml").read_text())
     assert lock["sources"]["framework"]["version"] == "1.2.0"
-    assert lock["sources"]["control_plane"]["version"] == "0.6.0"
+    assert lock["sources"]["control_plane"]["version"] == "0.7.0"
 
 
 def test_committed_derivatives_are_current(tmp_path: Path):
@@ -68,3 +70,20 @@ def test_guidance_instructions_do_not_claim_deterministic_execution():
     assert "Do not calculate or claim a deterministic tier" in instructions
     assert "Do not ask the user for an assessment ID" in instructions
     assert "A qualified human owns every final governance decision" in instructions
+
+
+@pytest.mark.parametrize('source,field', [('framework', 'commit'), ('framework', 'sha256'),
+                                         ('control_plane', 'implementation_sha256'), ('control_plane', 'policy_sha256')])
+def test_source_drift_fails_before_any_output_is_written(tmp_path, monkeypatch, source, field):
+    from ai_governance_copilot_agent import generator
+    lock = yaml.safe_load((ROOT / 'sources.lock.yaml').read_text())
+    lock['sources'][source][field] = 'deliberately-wrong'
+    monkeypatch.setattr(generator, '_sources_lock', lambda: deepcopy(lock))
+    with pytest.raises(ValueError, match='does not match'):
+        generator.build(tmp_path / 'output')
+    assert not (tmp_path / 'output').exists()
+
+
+def test_manifest_records_the_verified_runtime():
+    manifest = json.loads((GENERATED / 'manifest.json').read_text())
+    assert manifest['verified_runtime'] == GovernanceDecisionService.from_packaged_resources().runtime_identity()

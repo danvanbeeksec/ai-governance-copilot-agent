@@ -224,6 +224,16 @@ def build(output: Path = DEFAULT_OUTPUT) -> dict[str, str]:
     framework = yaml.safe_load(controls_text())
     lock = _sources_lock()
     service = GovernanceDecisionService.from_packaged_resources()
+    identity = service.runtime_identity()
+    framework_pin = lock['sources']['framework']
+    plane_pin = lock['sources']['control_plane']
+    if (framework_pin['commit'] != service.framework.source.commit
+            or framework_pin['sha256'] != service.framework.source.digest
+            or framework_pin['version'] != framework['library']['version']):
+        raise ValueError('Installed Framework identity does not match sources.lock.yaml')
+    for key in ('version', 'implementation_sha256', 'policy_sha256'):
+        if plane_pin.get(key) != identity[key]:
+            raise ValueError(f'Installed Control Plane {key} does not match sources.lock.yaml')
 
     artifacts = {
         "knowledge/control-library.md": _render_controls(framework),
@@ -234,6 +244,9 @@ def build(output: Path = DEFAULT_OUTPUT) -> dict[str, str]:
         "structured-assessment/decision-specification.yaml": yaml.safe_dump(
             service.risk_model, sort_keys=False, width=100
         ),
+        "structured-assessment/input-schema.json": json.dumps(
+            service.get_assessment_requirements().input_schema, indent=2, sort_keys=True
+        ) + "\n",
         "structured-assessment/applicability-specification.yaml": yaml.safe_dump(
             service.methodology.model_dump(mode="json"), sort_keys=False, width=100
         ),
@@ -258,6 +271,7 @@ def build(output: Path = DEFAULT_OUTPUT) -> dict[str, str]:
     manifest = {
         "schema_version": "1.0",
         "generated_from": lock["sources"],
+        "verified_runtime": identity,
         "artifacts": hashes,
     }
     _write(output / "manifest.json", json.dumps(manifest, indent=2, sort_keys=True) + "\n")
