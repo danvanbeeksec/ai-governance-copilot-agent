@@ -5,7 +5,7 @@ ai-governance-control-plane @ git+https://github.com/danvanbeeksec/ai-governance
     # via ai-governance-copilot-agent
 annotated-types==0.8.0
     # via pydantic
-pydantic==2.14.1
+pydantic==2.14.2
     # via ai-governance-control-plane
 pydantic-core==2.50.1
     # via pydantic
